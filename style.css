@@ -1,0 +1,151 @@
+/* the overall body and theme */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #050505;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+/* Now desigining the nav bar */
+nav {
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 20px;
+    border-bottom: 4px solid #555;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    gap: 29px;
+}
+
+/* the container of the buttons and video */
+.container {
+    background-color: #0c0c0c;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 7px solid black;
+    position: relative;
+}
+
+/* setting up the video */
+.pix_vid {
+    width: 100%;
+    max-width: 600px;
+    border: 4px solid #333;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    background: #000;
+}
+
+/* setting up the buttons */
+.btn {
+    display: flex;
+    gap: 40px;
+}
+
+button {
+    background: #000;
+    border: 2px solid #444;
+    color: #888;
+    padding: 12px 24px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #222;
+}
+
+/* setting up the scroll bar */
+#scroll-list {
+    display: none;
+    margin-top: 15px;
+    background: #111;
+    border: 2px solid #333;
+    overflow-x: scroll;
+    /* Horizontal scroll enabled */
+    padding: 15px;
+    white-space: nowrap;
+    width: 400px;
+}
+
+.color-grid {
+    display: grid;
+    gap: 2px;
+    grid-template-rows: repeat(2, 20px);
+    grid-template-columns: repeat(2, 20px);
+}
+
+.color-grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.palette-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    background: #000;
+    color: #888;
+    border: 2px solid #222;
+    padding: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.palette-card:hover {
+    border-color: chartreuse;
+}
+
+.palette-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+}
+
+/* setting the scroll bar */
+#scroll-list::-webkit-scrollbar {
+    height: 10px;
+}
+
+#scroll-list::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+#scroll-list::-webkit-scrollbar-thumb {
+    background: #222;
+    border: 1px solid #0f0;
+}
+
+video {
+    display: none;
+}
+
+#canvas {
+    display: none;
+}

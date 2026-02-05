@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Retro video</title>
+</head>
+
+<body>
+    <nav>
+        <h2>Pixel Video</h2>
+        <div class="link">
+            <a href="#">About Me</a>
+            <a href="#">Links</a>
+        </div>
+    </nav>
+    <div class="container">
+        <canvas class="pix_vid"></canvas>
+        <video class="webcam" autoplay muted playinline></video>
+        <canvas id="canvas"></canvas>
+        <div class="btn">
+            <button id="srt" onclick="open_cam()">START</button>
+            <button id="pale">View Palette</button>
+        </div>
+        <div id="scroll-list">
+            <ul class="palette-list">
+                <li class="palette-card">
+                    <span class="palette-name">Gameboy</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(15, 56, 15)"></div>
+                        <div style="background: rgb(48, 98, 48)"></div>
+                        <div style="background: rgb(139, 172, 15)"></div>
+                        <div style="background: rgb(155, 188, 15)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">NES</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(0, 0, 0)"></div>
+                        <div style="background: rgb(88, 88, 248)"></div>
+                        <div style="background: rgb(248, 88, 88)"></div>
+                        <div style="background: rgb(248, 248, 248)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">Atari</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(64, 64, 64)"></div>
+                        <div style="background: rgb(148, 85, 0)"></div>
+                        <div style="background: rgb(188, 188, 188)"></div>
+                        <div style="background: rgb(252, 252, 84)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">Cool</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(16, 8, 26)"></div>
+                        <div style="background: rgb(120, 167, 245)"></div>
+                        <div style="background: rgb(252, 209, 155)"></div>
+                        <div style="background: rgb(255, 255, 255)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">GB_Gray</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(26, 26, 26)"></div>
+                        <div style="background: rgb(90, 90, 90)"></div>
+                        <div style="background: rgb(160, 160, 160)"></div>
+                        <div style="background: rgb(224, 224, 224)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">Vaporwave</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(45, 0, 75)"></div>
+                        <div style="background: rgb(120, 60, 180)"></div>
+                        <div style="background: rgb(255, 120, 200)"></div>
+                        <div style="background: rgb(255, 240, 255)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">VirtualBoy</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(0, 0, 0)"></div>
+                        <div style="background: rgb(90, 0, 0)"></div>
+                        <div style="background: rgb(180, 0, 0)"></div>
+                        <div style="background: rgb(255, 0, 0)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">Spectrum</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(0, 0, 0)"></div>
+                        <div style="background: rgb(0, 0, 215)"></div>
+                        <div style="background: rgb(215, 0, 0)"></div>
+                        <div style="background: rgb(215, 215, 215)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">Noir</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(0, 0, 0)"></div>
+                        <div style="background: rgb(85, 85, 85)"></div>
+                        <div style="background: rgb(170, 170, 170)"></div>
+                        <div style="background: rgb(255, 255, 255)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">Cyberpunk</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(5, 5, 15)"></div>
+                        <div style="background: rgb(0, 180, 180)"></div>
+                        <div style="background: rgb(255, 0, 120)"></div>
+                        <div style="background: rgb(240, 240, 255)"></div>
+                    </div>
+                </li>
+                <li class="palette-card">
+                    <span class="palette-name">Antiquity_16</span>
+                    <div class="color-grid" style="grid-template-columns: repeat(4, 1fr);">
+                        <div style="background: rgb(32, 32, 32)"></div>
+                        <div style="background: rgb(45, 33, 30)"></div>
+                        <div style="background: rgb(69, 41, 35)"></div>
+                        <div style="background: rgb(109, 61, 41)"></div>
+                        <div style="background: rgb(177, 107, 74)"></div>
+                        <div style="background: rgb(232, 159, 110)"></div>
+                        <div style="background: rgb(232, 190, 130)"></div>
+                        <div style="background: rgb(93, 117, 87)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">CC_29</span>
+                    <div class="color-grid" style="grid-template-columns: repeat(4, 1fr);">
+                        <div style="background: rgb(242, 240, 229)"></div>
+                        <div style="background: rgb(184, 181, 185)"></div>
+                        <div style="background: rgb(134, 129, 136)"></div>
+                        <div style="background: rgb(100, 99, 101)"></div>
+                        <div style="background: rgb(69, 68, 79)"></div>
+                        <div style="background: rgb(58, 56, 88)"></div>
+                        <div style="background: rgb(33, 33, 35)"></div>
+                        <div style="background: rgb(53, 43, 66)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">Cool_Sweater</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(16, 8, 26)"></div>
+                        <div style="background: rgb(120, 167, 245)"></div>
+                        <div style="background: rgb(252, 209, 155)"></div>
+                        <div style="background: rgb(255, 255, 255)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">Nostalgia</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(46, 37, 61)"></div>
+                        <div style="background: rgb(176, 176, 176)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">Retro_Vibes</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(86, 71, 86)"></div>
+                        <div style="background: rgb(80, 125, 186)"></div>
+                        <div style="background: rgb(90, 204, 160)"></div>
+                        <div style="background: rgb(229, 247, 210)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">Seoul_City</span>
+                    <div class="color-grid">
+                        <div style="background: rgb(38, 84, 124)"></div>
+                        <div style="background: rgb(239, 71, 111)"></div>
+                        <div style="background: rgb(247, 140, 107)"></div>
+                        <div style="background: rgb(255, 209, 102)"></div>
+                    </div>
+                </li>
+
+                <li class="palette-card">
+                    <span class="palette-name">White_Scape</span>
+                    <div class="color-grid" style="grid-template-columns: repeat(3, 1fr);">
+                        <div style="background: rgb(0, 0, 0)"></div>
+                        <div style="background: rgb(31, 35, 46)"></div>
+                        <div style="background: rgb(95, 115, 123)"></div>
+                        <div style="background: rgb(162, 179, 178)"></div>
+                        <div style="background: rgb(67, 24, 55)"></div>
+                        <div style="background: rgb(165, 53, 81)"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
