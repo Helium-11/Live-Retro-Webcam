@@ -81,7 +81,7 @@ async function open_cam() {
         await video.play();
     }
     catch (err) {
-        console.error(`Error accessing webcam: ${err.name}-${err.message}`);
+        console.error(`Error accessing webcam: ${err.name}-${err.message} OR open your webcam and reload`);
         alert('Could not access the webcam');
     }
 }
@@ -217,5 +217,6 @@ document.querySelectorAll('.palette-card').forEach(card => {
 });
 
 // now to set the palette on click
+
 
 video.addEventListener('play', pixelate);
