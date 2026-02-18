@@ -11,4 +11,4 @@ For this I used euclidean distance, treating rgb value of video frame as an poin
 # Differnt Palettes
 The logic above allowed for palettes and I then added different color palettes.
 
-[link]()
+[link](https://helium-11.github.io/Live-Retro-Webcam/)
