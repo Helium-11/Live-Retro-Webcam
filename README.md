@@ -69,3 +69,6 @@ This project is a great exercise for understanding:
 + Real-time image manipulation.
 + The math behind color quantization.
 + Managing high-frequency UI updates in the DOM.
+
+## Lisence 
+Hey you are free to frok this repo and if you any suugestions please share it with me , Thanks.
