@@ -47,7 +47,21 @@ Simply open index.html in a modern web browser (Chrome or Brave recommended for 
 You must grant webcam permissions when prompted by the browser for the filter to work.
 
 ## Core Algorithm
-To find the most accurate color match, the app calculates the distance between the source pixel $(r, g, b)$ and the palette color $(pr, pg, pb)$ using the 3D distance formula:```distance = /sqrt{(r - pr)^2 + (g - pg)^2 + (b - pb)^2}```
+To find the most accurate color match, the app calculates the distance between the source pixel $(r, g, b)$ and the palette color $(pr, pg, pb)$ using the 3D distance formula:
+```
+function get_color(r, g, b, palette) {
+    let minDis = Infinity;
+    let best = palette[0];
+    for ([pr, pg, pb] of palette) {
+        let dis = (r - pr) ** 2 + (g - pg) ** 2 + (b - pb) ** 2;
+        if (dis < minDis) {
+            minDis = dis;
+            best = [pr, pg, pb];
+        }
+    }
+    return best;
+}
+```
 The pixel color is replaced with the palette color that yields the lowest distance value.
 
 ## Learning Value
