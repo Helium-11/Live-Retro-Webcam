@@ -101,6 +101,8 @@ function get_color(r, g, b, palette) {
     return best;
 }
 
+// the function stretch went unused because it tampered the video quality
+// if you would like to use thid function just uncomment some lines in pixelate function
 function stretch(r) {
     // 1. Normalize to 0.0 - 1.0
     let x = r / 255;
@@ -110,7 +112,6 @@ function stretch(r) {
     x = 0.5 + (x - 0.5) * strength;
 
     // 3. Sigmoid S-Curve (The "Smoothing" part)
-    // We must clamp x to 0-1 first so the math doesn't explode
     x = Math.max(0, Math.min(1, x));
 
     if (x < 0.5) {
@@ -220,3 +221,4 @@ document.querySelectorAll('.palette-card').forEach(card => {
 
 
 video.addEventListener('play', pixelate);
+
