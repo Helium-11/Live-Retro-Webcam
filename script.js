@@ -116,7 +116,8 @@ function stretch(r) {
 
     if (x < 0.5) {
         x = 2 * x * x;
-    } else {
+    } 
+    else {
         x = 1 - 2 * (1 - x) * (1 - x);
     }
 
@@ -161,8 +162,7 @@ function pixelate() {
             d[i] = r;
             d[i + 1] = g;
             d[i + 2] = b;
-
-
+            
             // USE ONLY WHEN FACTOR IS LARGER
             // // factor for flat shading (quantization)
             // d[i]     = Math.floor(r / factor) * factor;
@@ -194,7 +194,8 @@ open_btn.addEventListener('click', () => {
     if (isHidden) {
         scroll_section.style.display = 'block';
         open_btn.textContent = "Close Palette";
-    } else {
+    } 
+    else {
         scroll_section.style.display = 'none';
         open_btn.textContent = "View Palette";
     }
@@ -221,4 +222,5 @@ document.querySelectorAll('.palette-card').forEach(card => {
 
 
 video.addEventListener('play', pixelate);
+
 
